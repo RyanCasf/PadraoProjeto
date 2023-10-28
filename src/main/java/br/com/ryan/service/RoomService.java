@@ -1,17 +1,17 @@
 package br.com.ryan.service;
 
-import br.com.ryan.connection.MysqlConnection;
+import br.com.ryan.connection.IConnection;
 
 public class RoomService {
 	
-	private MysqlConnection connection;
+	private IConnection connection;
 	
-	public RoomService() {
-		connection = new MysqlConnection();
+	public RoomService(IConnection connection) {
+		this.connection = connection;
 	}
 	
 	public boolean verification() {
-		connection.connection();
+		connection.connect();
 		return true;
 	}
 }

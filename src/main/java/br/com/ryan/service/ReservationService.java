@@ -1,17 +1,17 @@
 package br.com.ryan.service;
 
-import br.com.ryan.connection.MysqlConnection;
+import br.com.ryan.connection.IConnection;
 
 public class ReservationService {
 	
-	private MysqlConnection connection;
+	private IConnection connection;
 	
-	public ReservationService() {
-		connection = new MysqlConnection();
+	public ReservationService(IConnection connection) {
+		this.connection = connection;
 	}
 	
 	public boolean create() {
-		connection.connection();
+		connection.connect();
 		return true;
 	}
 }

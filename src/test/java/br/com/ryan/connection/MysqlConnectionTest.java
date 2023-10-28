@@ -16,7 +16,7 @@ final class MysqlConnectionTest {
 	}
 	
 	@Test
-	void connection() {
-		connection.connection();
+	void connect() {
+		connection.connect();
 	}
 }
